@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLDPWL52CT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BLDPWL52CT');
+    </script>
+
+    <title>Submit a Listing | TeamBuildingCity</title>
+    <meta name="description" content="Add your team building business to the TeamBuildingCity directory. Free listing for qualified businesses.">
+    <link rel="canonical" href="https://teambuildingcity.com/submit-listing/">
+    <meta http-equiv="content-language" content="en-US">
+    <link rel="alternate" hreflang="en-US" href="https://teambuildingcity.com//">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TeamBuildingCity">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teambuildingcity.com/">
+    <meta property="og:site_name" content="TeamBuildingCity">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TeamBuildingCity">
+    <meta name="twitter:description" content="Find team building activities across 100 US cities.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Schema markup -->
+    
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <svg class="nav-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="36" height="30">
+                    <defs>
+                        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0B6E6E"/>
+                            <stop offset="100%" style="stop-color:#085858"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(10, 4)">
+                        <circle cx="12" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="5.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                        <circle cx="31" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="23" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="6" r="8.5" fill="url(#tealGrad)"/>
+                        <rect x="43" y="17" width="18" height="60" rx="5.5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="32" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="43" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="54" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="73" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="65" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="92" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="85.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                    </g>
+                </svg>
+                <span class="nav-logo-text">TeamBuildingCity</span>
+            </a>
+            <div class="nav-links">
+                <a href="../cities/index.html">Cities</a>
+                <a href="../states/index.html">States</a>
+                <a href="../activities/index.html">Activities</a>
+                <a href="../submit-listing/index.html">Add Listing</a>
+            </div>
+            <div class="nav-auth">
+                <button id="auth-login-btn" class="btn-auth" onclick="showAuthModal('login')">Sign In</button>
+                <div id="auth-user-menu" class="user-menu" style="display:none;">
+                    <button class="user-menu-trigger" onclick="toggleUserMenu()">
+                        <span id="auth-user-name"></span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="../favorites/index.html">My Favorites</a>
+                        <a href="../my-submissions/index.html">My Submissions</a>
+                        <button onclick="signOut()">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+<section class="page-header">
+    <h1>Add Your Business to TeamBuildingCity</h1>
+    <p>Submit your team building activity or venue for inclusion in our directory. All submissions are reviewed before publishing.</p>
+</section>
+
+<section class="submit-section">
+    <div id="submit-requires-auth" class="submit-auth-notice">
+        <p>You need to <a href="#" onclick="showAuthModal('login'); return false;">sign in</a> or <a href="#" onclick="showAuthModal('signup'); return false;">create an account</a> to submit a listing.</p>
+    </div>
+
+    <form id="submit-listing-form" class="listing-form" style="display:none;">
+        <h2>Business Information</h2>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="sl-business-name">Business Name *</label>
+                <input type="text" id="sl-business-name" name="business_name" required maxlength="200">
+            </div>
+        </div>
+
+        <div class="form-row form-row-2col">
+            <div class="form-group">
+                <label for="sl-city">City *</label>
+                <input type="text" id="sl-city" name="city" required maxlength="100">
+            </div>
+            <div class="form-group">
+                <label for="sl-state">State *</label>
+                <select id="sl-state" name="state" required>
+                    <option value="">Select state...</option>
+                    <option value="Alabama">Alabama</option><option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option><option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option><option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option><option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option><option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option><option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option><option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option><option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option><option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option><option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option><option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row form-row-2col">
+            <div class="form-group">
+                <label for="sl-address">Street Address</label>
+                <input type="text" id="sl-address" name="street_address" maxlength="300">
+            </div>
+            <div class="form-group">
+                <label for="sl-zip">Zip Code</label>
+                <input type="text" id="sl-zip" name="zip_code" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit or ZIP+4 format">
+            </div>
+        </div>
+
+        <div class="form-row form-row-2col">
+            <div class="form-group">
+                <label for="sl-phone">Phone Number</label>
+                <input type="tel" id="sl-phone" name="phone" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="sl-website">Website</label>
+                <input type="url" id="sl-website" name="website" placeholder="https://" maxlength="300">
+            </div>
+        </div>
+
+        <h2>Activity Details</h2>
+
+        <div class="form-group">
+            <label for="sl-description">Description *</label>
+            <textarea id="sl-description" name="description" required maxlength="2000" rows="5" placeholder="Describe your team building activities, what makes them unique, and what groups can expect."></textarea>
+        </div>
+
+        <div class="form-row form-row-2col">
+            <div class="form-group">
+                <label for="sl-group-sizes">Group Size Capacity</label>
+                <select id="sl-group-sizes" name="group_sizes">
+                    <option value="">Select...</option>
+                    <option value="Small (2-15)">Small (2-15)</option>
+                    <option value="Medium (16-50)">Medium (16-50)</option>
+                    <option value="Large (51-200)">Large (51-200)</option>
+                    <option value="Enterprise (200+)">Enterprise (200+)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sl-price-range">Price Range</label>
+                <select id="sl-price-range" name="price_range">
+                    <option value="">Select...</option>
+                    <option value="$">$ (Budget-friendly)</option>
+                    <option value="$$">$$ (Moderate)</option>
+                    <option value="$$$">$$$ (Premium)</option>
+                    <option value="$$$$">$$$$ (Luxury)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Activity Types (select all that apply)</label>
+            <div class="checkbox-grid">
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Escape Rooms"> Escape Rooms</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Cooking/Baking Classes"> Cooking/Baking Classes</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Outdoor Adventures"> Outdoor Adventures</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Workshops & Seminars"> Workshops & Seminars</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Sports & Recreation"> Sports & Recreation</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Art & Creative"> Art & Creative</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Virtual/Remote"> Virtual/Remote</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Scavenger Hunts"> Scavenger Hunts</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Trivia & Game Shows"> Trivia & Game Shows</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Volunteering/CSR"> Volunteering/CSR</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Wellness & Mindfulness"> Wellness & Mindfulness</label>
+                <label class="checkbox-label"><input type="checkbox" name="activity_types" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <!-- Honeypot -->
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <input type="text" name="company_url" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div id="submit-status" class="form-status" style="display:none;"></div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-submit-listing">Submit for Review</button>
+        </div>
+
+        <p class="form-note">Submissions are typically reviewed within 1-2 business days. You will receive an email notification once your listing has been reviewed.</p>
+    </form>
+</section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 TeamBuildingCity. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="../cities/index.html">All Cities</a>
+                <a href="../states/index.html">By State</a>
+                <a href="../activities/index.html">Activities</a>
+                <a href="../about/index.html">About</a>
+                <a href="../contact/index.html">Contact</a>
+            </nav>
+            <nav class="footer-legal">
+                <a href="../privacy/index.html">Privacy Policy</a>
+                <a href="../terms/index.html">Terms of Use</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-overlay"></div>
+        <div class="auth-modal-content">
+            <button class="auth-modal-close" aria-label="Close">&times;</button>
+            <div class="auth-tabs">
+                <button id="auth-tab-login" class="auth-tab active" onclick="switchAuthMode('login')">Sign In</button>
+                <button id="auth-tab-signup" class="auth-tab" onclick="switchAuthMode('signup')">Create Account</button>
+            </div>
+            <div id="auth-login-form">
+                <form id="login-form">
+                    <div class="auth-field">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Sign In</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+            <div id="auth-signup-form" style="display:none;">
+                <form id="signup-form">
+                    <div class="auth-field">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="6" autocomplete="new-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <div class="auth-success" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Create Account</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="../static/js/auth.js"></script>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function checkAuthForForm() {
+    const authNotice = document.getElementById('submit-requires-auth');
+    const form = document.getElementById('submit-listing-form');
+    if (_currentUser) {
+      authNotice.style.display = 'none';
+      form.style.display = 'block';
+    } else {
+      authNotice.style.display = 'block';
+      form.style.display = 'none';
+    }
+  }
+
+  // Check after auth settles
+  setTimeout(checkAuthForForm, 600);
+
+  // Also listen for auth changes
+  const origUpdate = window.updateAuthUI;
+  window.updateAuthUI = function() {
+    origUpdate();
+    checkAuthForForm();
+  };
+
+  // Form submission
+  const form = document.getElementById('submit-listing-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const statusEl = document.getElementById('submit-status');
+      const btn = form.querySelector('.btn-submit-listing');
+
+      // Honeypot check
+      if (form.querySelector('[name="company_url"]').value) return;
+
+      const activityTypes = Array.from(form.querySelectorAll('[name="activity_types"]:checked')).map(cb => cb.value);
+
+      const payload = {
+        business_name: form.querySelector('[name="business_name"]').value.trim(),
+        city: form.querySelector('[name="city"]').value.trim(),
+        state: form.querySelector('[name="state"]').value,
+        street_address: form.querySelector('[name="street_address"]').value.trim(),
+        zip_code: form.querySelector('[name="zip_code"]').value.trim(),
+        phone: form.querySelector('[name="phone"]').value.trim(),
+        website: form.querySelector('[name="website"]').value.trim(),
+        description: form.querySelector('[name="description"]').value.trim(),
+        group_sizes: form.querySelector('[name="group_sizes"]').value,
+        price_range: form.querySelector('[name="price_range"]').value,
+        activity_types: activityTypes
+      };
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      statusEl.style.display = 'none';
+
+      try {
+        const sb = getSupabase();
+        const { data: { session } } = await sb.auth.getSession();
+
+        const resp = await fetch('/api/submit-listing', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + session.access_token
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await resp.json();
+
+        if (result.ok) {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = 'Your listing has been submitted for review. You will receive an email once it has been processed.';
+          statusEl.style.display = 'block';
+          form.reset();
+        } else {
+          statusEl.className = 'form-status error';
+          statusEl.textContent = result.error || 'Something went wrong. Please try again.';
+          statusEl.style.display = 'block';
+        }
+      } catch (err) {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Network error. Please try again.';
+        statusEl.style.display = 'block';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Submit for Review';
+    });
+  }
+});
+</script>
+
+</body>
+</html>

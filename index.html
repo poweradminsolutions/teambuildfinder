@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLDPWL52CT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BLDPWL52CT');
+    </script>
+
+    <title>Find Team Building Activities Your Team Will Actually Enjoy | TeamBuildingCity</title>
+    <meta name="description" content="Compare 5251 vetted team building activities across 44 US cities. Real ratings, real reviews, direct booking. Escape rooms, cooking classes, outdoor adventures and more.">
+    <link rel="canonical" href="https://teambuildingcity.com/">
+    <meta http-equiv="content-language" content="en-US">
+    <link rel="alternate" hreflang="en-US" href="https://teambuildingcity.com//">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TeamBuildingCity">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teambuildingcity.com/">
+    <meta property="og:site_name" content="TeamBuildingCity">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TeamBuildingCity">
+    <meta name="twitter:description" content="Find team building activities across 100 US cities.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- Schema markup -->
+    
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="./index.html" class="nav-logo">
+                <svg class="nav-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="36" height="30">
+                    <defs>
+                        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0B6E6E"/>
+                            <stop offset="100%" style="stop-color:#085858"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(10, 4)">
+                        <circle cx="12" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="5.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                        <circle cx="31" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="23" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="6" r="8.5" fill="url(#tealGrad)"/>
+                        <rect x="43" y="17" width="18" height="60" rx="5.5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="32" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="43" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="54" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="73" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="65" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="92" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="85.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                    </g>
+                </svg>
+                <span class="nav-logo-text">TeamBuildingCity</span>
+            </a>
+            <div class="nav-links">
+                <a href="./cities/index.html">Cities</a>
+                <a href="./states/index.html">States</a>
+                <a href="./activities/index.html">Activities</a>
+                <a href="./submit-listing/index.html">Add Listing</a>
+            </div>
+            <div class="nav-auth">
+                <button id="auth-login-btn" class="btn-auth" onclick="showAuthModal('login')">Sign In</button>
+                <div id="auth-user-menu" class="user-menu" style="display:none;">
+                    <button class="user-menu-trigger" onclick="toggleUserMenu()">
+                        <span id="auth-user-name"></span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="./favorites/index.html">My Favorites</a>
+                        <a href="./my-submissions/index.html">My Submissions</a>
+                        <button onclick="signOut()">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="hero-bg">
+        <img src="./static/images/hero-team.jpg" alt="Team celebrating during a team building activity" width="1920" height="1080">
+    </div>
+    <div class="hero-inner">
+        <h1>Team building that doesn't make people groan</h1>
+        <p class="hero-sub">5251 vetted activities across 44 cities. Real ratings from real teams. Find something your people will actually talk about on Monday.</p>
+        <div class="search-bar">
+            <input type="text" id="city-search" placeholder="Try &quot;escape rooms in Austin&quot; or &quot;cooking classes&quot;..." autocomplete="off" aria-label="Search cities and activities">
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">5251</span>
+                <span class="hero-stat-label">Vetted Activities</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">44</span>
+                <span class="hero-stat-label">US Cities</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">4.7&#9733;</span>
+                <span class="hero-stat-label">Avg Rating</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trust-bar">
+    <div class="trust-bar-inner">
+        <div class="trust-item">
+            <span class="trust-icon"><svg viewBox="0 0 20 20" fill="currentColor" style="color: #0B6E6E"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+            Real Google ratings &amp; reviews
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon"><svg viewBox="0 0 20 20" fill="currentColor" style="color: #0B6E6E"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+            No pay-to-play rankings
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon"><svg viewBox="0 0 20 20" fill="currentColor" style="color: #0B6E6E"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+            Direct booking links
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon"><svg viewBox="0 0 20 20" fill="currentColor" style="color: #0B6E6E"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+            Updated weekly
+        </div>
+    </div>
+</div>
+
+
+<section class="activity-categories">
+    <div class="section-header">
+        <h2>What's your team into?</h2>
+        <a href="./activities/index.html">View all activities &rarr;</a>
+    </div>
+    <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+        
+        <a href="./activities/facilitated-workshops/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-corporate">📋</div>
+            <h3>Facilitated Workshops</h3>
+            <p>1812 options</p>
+        </a>
+        
+        <a href="./activities/retreats/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-corporate">🏕️</div>
+            <h3>Retreats</h3>
+            <p>1644 options</p>
+        </a>
+        
+        <a href="./activities/art-workshops/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">🎨</div>
+            <h3>Art Workshops</h3>
+            <p>550 options</p>
+        </a>
+        
+        <a href="./activities/escape-rooms/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-physical">🔐</div>
+            <h3>Escape Rooms</h3>
+            <p>473 options</p>
+        </a>
+        
+        <a href="./activities/craft-workshops/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">✂️</div>
+            <h3>Craft Workshops</h3>
+            <p>428 options</p>
+        </a>
+        
+        <a href="./activities/improv-comedy/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">🎭</div>
+            <h3>Improv/Comedy</h3>
+            <p>393 options</p>
+        </a>
+        
+        <a href="./activities/cooking-baking-classes/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">👨‍🍳</div>
+            <h3>Cooking/Baking Classes</h3>
+            <p>375 options</p>
+        </a>
+        
+        <a href="./activities/volunteer-charity/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-community">❤️</div>
+            <h3>Volunteer/Charity</h3>
+            <p>367 options</p>
+        </a>
+        
+        <a href="./activities/trivia-game-nights/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">🎲</div>
+            <h3>Trivia/Game Nights</h3>
+            <p>333 options</p>
+        </a>
+        
+        <a href="./activities/hiking-nature/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-physical">🌲</div>
+            <h3>Hiking &amp; Nature</h3>
+            <p>279 options</p>
+        </a>
+        
+        <a href="./activities/music-drumming/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-creative">🎵</div>
+            <h3>Music/Drumming</h3>
+            <p>251 options</p>
+        </a>
+        
+        <a href="./activities/ropes-obstacle-courses/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-physical">🧗</div>
+            <h3>Ropes/Obstacle Courses</h3>
+            <p>233 options</p>
+        </a>
+        
+        <a href="./activities/innovation-design-thinking/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-corporate">💡</div>
+            <h3>Innovation/Design Thinking</h3>
+            <p>212 options</p>
+        </a>
+        
+        <a href="./activities/virtual-escape-rooms/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-virtual">🖥️</div>
+            <h3>Virtual Escape Rooms</h3>
+            <p>192 options</p>
+        </a>
+        
+        <a href="./activities/environmental-cleanup/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-default">🎯</div>
+            <h3>Environmental Cleanup</h3>
+            <p>178 options</p>
+        </a>
+        
+        <a href="./activities/axe-throwing/index.html" class="activity-cat-card">
+            <div class="activity-cat-icon icon-physical">🪓</div>
+            <h3>Axe Throwing</h3>
+            <p>170 options</p>
+        </a>
+        
+    </div>
+</section>
+
+
+<section class="cities-grid">
+    <div class="section-header">
+        <h2>Browse by city</h2>
+        <a href="./cities/index.html">All 44 cities &rarr;</a>
+    </div>
+    <div class="grid">
+        
+        <a href="./cities/new-york-ny/index.html" class="city-card">
+            <h3>New York, NY</h3>
+            <p>346 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/chicago-il/index.html" class="city-card">
+            <h3>Chicago, IL</h3>
+            <p>260 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/los-angeles-ca/index.html" class="city-card">
+            <h3>Los Angeles, CA</h3>
+            <p>218 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/allentown-pa/index.html" class="city-card">
+            <h3>Allentown, PA</h3>
+            <p>190 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/philadelphia-pa/index.html" class="city-card">
+            <h3>Philadelphia, PA</h3>
+            <p>187 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/houston-tx/index.html" class="city-card">
+            <h3>Houston, TX</h3>
+            <p>181 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/atlanta-ga/index.html" class="city-card">
+            <h3>Atlanta, GA</h3>
+            <p>162 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/phoenix-az/index.html" class="city-card">
+            <h3>Phoenix, AZ</h3>
+            <p>160 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/charlotte-nc/index.html" class="city-card">
+            <h3>Charlotte, NC</h3>
+            <p>145 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/detroit-mi/index.html" class="city-card">
+            <h3>Detroit, MI</h3>
+            <p>145 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/boston-ma/index.html" class="city-card">
+            <h3>Boston, MA</h3>
+            <p>144 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/pittsburgh-pa/index.html" class="city-card">
+            <h3>Pittsburgh, PA</h3>
+            <p>140 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/st-louis-mo/index.html" class="city-card">
+            <h3>St. Louis, MO</h3>
+            <p>136 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/albany-ny/index.html" class="city-card">
+            <h3>Albany, NY</h3>
+            <p>132 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/birmingham-al/index.html" class="city-card">
+            <h3>Birmingham, AL</h3>
+            <p>130 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/richmond-va/index.html" class="city-card">
+            <h3>Richmond, VA</h3>
+            <p>130 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/tampa-fl/index.html" class="city-card">
+            <h3>Tampa, FL</h3>
+            <p>130 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/buffalo-ny/index.html" class="city-card">
+            <h3>Buffalo, NY</h3>
+            <p>122 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/miami-fl/index.html" class="city-card">
+            <h3>Miami, FL</h3>
+            <p>121 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/raleigh-nc/index.html" class="city-card">
+            <h3>Raleigh, NC</h3>
+            <p>121 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/charleston-sc/index.html" class="city-card">
+            <h3>Charleston, SC</h3>
+            <p>118 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/minneapolis-mn/index.html" class="city-card">
+            <h3>Minneapolis, MN</h3>
+            <p>118 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/new-haven-ct/index.html" class="city-card">
+            <h3>New Haven, CT</h3>
+            <p>113 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/bridgeport-ct/index.html" class="city-card">
+            <h3>Bridgeport, CT</h3>
+            <p>108 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/jacksonville-fl/index.html" class="city-card">
+            <h3>Jacksonville, FL</h3>
+            <p>107 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/hartford-ct/index.html" class="city-card">
+            <h3>Hartford, CT</h3>
+            <p>105 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/louisville-ky/index.html" class="city-card">
+            <h3>Louisville, KY</h3>
+            <p>105 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/memphis-tn/index.html" class="city-card">
+            <h3>Memphis, TN</h3>
+            <p>104 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/new-orleans-la/index.html" class="city-card">
+            <h3>New Orleans, LA</h3>
+            <p>100 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/nashville-tn/index.html" class="city-card">
+            <h3>Nashville, TN</h3>
+            <p>99 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/virginia-beach-va/index.html" class="city-card">
+            <h3>Virginia Beach, VA</h3>
+            <p>94 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/knoxville-tn/index.html" class="city-card">
+            <h3>Knoxville, TN</h3>
+            <p>90 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/harrisburg-pa/index.html" class="city-card">
+            <h3>Harrisburg, PA</h3>
+            <p>89 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/rochester-ny/index.html" class="city-card">
+            <h3>Rochester, NY</h3>
+            <p>87 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/orlando-fl/index.html" class="city-card">
+            <h3>Orlando, FL</h3>
+            <p>84 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/columbia-sc/index.html" class="city-card">
+            <h3>Columbia, SC</h3>
+            <p>75 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/greenville-sc/index.html" class="city-card">
+            <h3>Greenville, SC</h3>
+            <p>75 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/syracuse-ny/index.html" class="city-card">
+            <h3>Syracuse, NY</h3>
+            <p>71 activities &middot; 4.6&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/providence-ri/index.html" class="city-card">
+            <h3>Providence, RI</h3>
+            <p>49 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/worcester-ma/index.html" class="city-card">
+            <h3>Worcester, MA</h3>
+            <p>46 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/lakeland-fl/index.html" class="city-card">
+            <h3>Lakeland, FL</h3>
+            <p>32 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/cape-coral-fl/index.html" class="city-card">
+            <h3>Cape Coral, FL</h3>
+            <p>30 activities &middot; 4.7&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/palm-bay-fl/index.html" class="city-card">
+            <h3>Palm Bay, FL</h3>
+            <p>29 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+        <a href="./cities/cincinnati-oh/index.html" class="city-card">
+            <h3>Cincinnati, OH</h3>
+            <p>23 activities &middot; 4.8&#9733; avg</p>
+        </a>
+        
+    </div>
+</section>
+
+
+<section class="cities-grid">
+    <div class="section-header">
+        <h2>Browse by state</h2>
+        <a href="./states/index.html">All states &rarr;</a>
+    </div>
+    <div class="grid">
+        
+        <a href="./states/alabama/index.html" class="city-card">
+            <h3>Alabama</h3>
+            <p>1 cities &middot; 130 activities</p>
+        </a>
+        
+        <a href="./states/arizona/index.html" class="city-card">
+            <h3>Arizona</h3>
+            <p>1 cities &middot; 160 activities</p>
+        </a>
+        
+        <a href="./states/california/index.html" class="city-card">
+            <h3>California</h3>
+            <p>1 cities &middot; 218 activities</p>
+        </a>
+        
+        <a href="./states/connecticut/index.html" class="city-card">
+            <h3>Connecticut</h3>
+            <p>3 cities &middot; 326 activities</p>
+        </a>
+        
+        <a href="./states/florida/index.html" class="city-card">
+            <h3>Florida</h3>
+            <p>7 cities &middot; 533 activities</p>
+        </a>
+        
+        <a href="./states/georgia/index.html" class="city-card">
+            <h3>Georgia</h3>
+            <p>1 cities &middot; 162 activities</p>
+        </a>
+        
+        <a href="./states/illinois/index.html" class="city-card">
+            <h3>Illinois</h3>
+            <p>1 cities &middot; 260 activities</p>
+        </a>
+        
+        <a href="./states/kentucky/index.html" class="city-card">
+            <h3>Kentucky</h3>
+            <p>1 cities &middot; 105 activities</p>
+        </a>
+        
+        <a href="./states/louisiana/index.html" class="city-card">
+            <h3>Louisiana</h3>
+            <p>1 cities &middot; 100 activities</p>
+        </a>
+        
+        <a href="./states/massachusetts/index.html" class="city-card">
+            <h3>Massachusetts</h3>
+            <p>2 cities &middot; 190 activities</p>
+        </a>
+        
+        <a href="./states/michigan/index.html" class="city-card">
+            <h3>Michigan</h3>
+            <p>1 cities &middot; 145 activities</p>
+        </a>
+        
+        <a href="./states/minnesota/index.html" class="city-card">
+            <h3>Minnesota</h3>
+            <p>1 cities &middot; 118 activities</p>
+        </a>
+        
+        <a href="./states/missouri/index.html" class="city-card">
+            <h3>Missouri</h3>
+            <p>1 cities &middot; 136 activities</p>
+        </a>
+        
+        <a href="./states/new-york/index.html" class="city-card">
+            <h3>New York</h3>
+            <p>5 cities &middot; 758 activities</p>
+        </a>
+        
+        <a href="./states/north-carolina/index.html" class="city-card">
+            <h3>North Carolina</h3>
+            <p>2 cities &middot; 266 activities</p>
+        </a>
+        
+        <a href="./states/ohio/index.html" class="city-card">
+            <h3>Ohio</h3>
+            <p>1 cities &middot; 23 activities</p>
+        </a>
+        
+        <a href="./states/pennsylvania/index.html" class="city-card">
+            <h3>Pennsylvania</h3>
+            <p>4 cities &middot; 606 activities</p>
+        </a>
+        
+        <a href="./states/rhode-island/index.html" class="city-card">
+            <h3>Rhode Island</h3>
+            <p>1 cities &middot; 49 activities</p>
+        </a>
+        
+        <a href="./states/south-carolina/index.html" class="city-card">
+            <h3>South Carolina</h3>
+            <p>3 cities &middot; 268 activities</p>
+        </a>
+        
+        <a href="./states/tennessee/index.html" class="city-card">
+            <h3>Tennessee</h3>
+            <p>3 cities &middot; 293 activities</p>
+        </a>
+        
+        <a href="./states/texas/index.html" class="city-card">
+            <h3>Texas</h3>
+            <p>1 cities &middot; 181 activities</p>
+        </a>
+        
+        <a href="./states/virginia/index.html" class="city-card">
+            <h3>Virginia</h3>
+            <p>2 cities &middot; 224 activities</p>
+        </a>
+        
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 TeamBuildingCity. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="./cities/index.html">All Cities</a>
+                <a href="./states/index.html">By State</a>
+                <a href="./activities/index.html">Activities</a>
+                <a href="./about/index.html">About</a>
+                <a href="./contact/index.html">Contact</a>
+            </nav>
+            <nav class="footer-legal">
+                <a href="./privacy/index.html">Privacy Policy</a>
+                <a href="./terms/index.html">Terms of Use</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-overlay"></div>
+        <div class="auth-modal-content">
+            <button class="auth-modal-close" aria-label="Close">&times;</button>
+            <div class="auth-tabs">
+                <button id="auth-tab-login" class="auth-tab active" onclick="switchAuthMode('login')">Sign In</button>
+                <button id="auth-tab-signup" class="auth-tab" onclick="switchAuthMode('signup')">Create Account</button>
+            </div>
+            <div id="auth-login-form">
+                <form id="login-form">
+                    <div class="auth-field">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Sign In</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+            <div id="auth-signup-form" style="display:none;">
+                <form id="signup-form">
+                    <div class="auth-field">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="6" autocomplete="new-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <div class="auth-success" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Create Account</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="./static/js/auth.js"></script>
+    
+<script src="./static/js/search.js"></script>
+
+</body>
+</html>

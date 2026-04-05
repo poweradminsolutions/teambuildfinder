@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLDPWL52CT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BLDPWL52CT');
+    </script>
+
+    <title>Browse by Activity Type | TeamBuildingCity</title>
+    <meta name="description" content="Browse 112 types of team building activities across the US. Escape rooms, cooking classes, outdoor adventures, workshops and more.">
+    <link rel="canonical" href="https://teambuildingcity.com/activities/">
+    <meta http-equiv="content-language" content="en-US">
+    <link rel="alternate" hreflang="en-US" href="https://teambuildingcity.com/activities/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TeamBuildingCity">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teambuildingcity.com/">
+    <meta property="og:site_name" content="TeamBuildingCity">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TeamBuildingCity">
+    <meta name="twitter:description" content="Find team building activities across 100 US cities.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Schema markup -->
+    
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <svg class="nav-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="36" height="30">
+                    <defs>
+                        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0B6E6E"/>
+                            <stop offset="100%" style="stop-color:#085858"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(10, 4)">
+                        <circle cx="12" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="5.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                        <circle cx="31" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="23" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="6" r="8.5" fill="url(#tealGrad)"/>
+                        <rect x="43" y="17" width="18" height="60" rx="5.5" fill="url(#tealGrad)"/>
+                        <circle cx="52" cy="32" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="43" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="52" cy="54" r="2.2" fill="white" opacity="0.4"/>
+                        <circle cx="73" cy="18" r="7.5" fill="url(#tealGrad)"/>
+                        <rect x="65" y="28" width="16" height="49" rx="5" fill="url(#tealGrad)"/>
+                        <circle cx="92" cy="34" r="6.5" fill="url(#tealGrad)"/>
+                        <rect x="85.5" y="43" width="13" height="34" rx="4.5" fill="url(#tealGrad)"/>
+                    </g>
+                </svg>
+                <span class="nav-logo-text">TeamBuildingCity</span>
+            </a>
+            <div class="nav-links">
+                <a href="../cities/index.html">Cities</a>
+                <a href="../states/index.html">States</a>
+                <a href="../activities/index.html">Activities</a>
+                <a href="../submit-listing/index.html">Add Listing</a>
+            </div>
+            <div class="nav-auth">
+                <button id="auth-login-btn" class="btn-auth" onclick="showAuthModal('login')">Sign In</button>
+                <div id="auth-user-menu" class="user-menu" style="display:none;">
+                    <button class="user-menu-trigger" onclick="toggleUserMenu()">
+                        <span id="auth-user-name"></span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="../favorites/index.html">My Favorites</a>
+                        <a href="../my-submissions/index.html">My Submissions</a>
+                        <button onclick="signOut()">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a> &rsaquo;
+    <span>Activities</span>
+</nav>
+
+<section class="page-header">
+    <h1>Browse by Activity Type</h1>
+    <p>112 activity types across 5251 listings</p>
+</section>
+
+<section class="category-grid">
+    <div class="grid">
+        
+        <a href="../activities/facilitated-workshops/index.html" class="cat-card">
+            <h3>Facilitated Workshops</h3>
+            <p>1812 options in 44 cities</p>
+        </a>
+        
+        <a href="../activities/retreats/index.html" class="cat-card">
+            <h3>Retreats</h3>
+            <p>1644 options in 44 cities</p>
+        </a>
+        
+        <a href="../activities/art-workshops/index.html" class="cat-card">
+            <h3>Art Workshops</h3>
+            <p>550 options in 44 cities</p>
+        </a>
+        
+        <a href="../activities/escape-rooms/index.html" class="cat-card">
+            <h3>Escape Rooms</h3>
+            <p>473 options in 43 cities</p>
+        </a>
+        
+        <a href="../activities/craft-workshops/index.html" class="cat-card">
+            <h3>Craft Workshops</h3>
+            <p>428 options in 41 cities</p>
+        </a>
+        
+        <a href="../activities/improv-comedy/index.html" class="cat-card">
+            <h3>Improv/Comedy</h3>
+            <p>393 options in 42 cities</p>
+        </a>
+        
+        <a href="../activities/cooking-baking-classes/index.html" class="cat-card">
+            <h3>Cooking/Baking Classes</h3>
+            <p>375 options in 43 cities</p>
+        </a>
+        
+        <a href="../activities/volunteer-charity/index.html" class="cat-card">
+            <h3>Volunteer/Charity</h3>
+            <p>367 options in 43 cities</p>
+        </a>
+        
+        <a href="../activities/trivia-game-nights/index.html" class="cat-card">
+            <h3>Trivia/Game Nights</h3>
+            <p>333 options in 44 cities</p>
+        </a>
+        
+        <a href="../activities/hiking-nature/index.html" class="cat-card">
+            <h3>Hiking &amp; Nature</h3>
+            <p>279 options in 42 cities</p>
+        </a>
+        
+        <a href="../activities/music-drumming/index.html" class="cat-card">
+            <h3>Music/Drumming</h3>
+            <p>251 options in 40 cities</p>
+        </a>
+        
+        <a href="../activities/ropes-obstacle-courses/index.html" class="cat-card">
+            <h3>Ropes/Obstacle Courses</h3>
+            <p>233 options in 42 cities</p>
+        </a>
+        
+        <a href="../activities/innovation-design-thinking/index.html" class="cat-card">
+            <h3>Innovation/Design Thinking</h3>
+            <p>212 options in 37 cities</p>
+        </a>
+        
+        <a href="../activities/virtual-escape-rooms/index.html" class="cat-card">
+            <h3>Virtual Escape Rooms</h3>
+            <p>192 options in 36 cities</p>
+        </a>
+        
+        <a href="../activities/environmental-cleanup/index.html" class="cat-card">
+            <h3>Environmental Cleanup</h3>
+            <p>178 options in 38 cities</p>
+        </a>
+        
+        <a href="../activities/axe-throwing/index.html" class="cat-card">
+            <h3>Axe Throwing</h3>
+            <p>170 options in 40 cities</p>
+        </a>
+        
+        <a href="../activities/sports-tournaments/index.html" class="cat-card">
+            <h3>Sports &amp; Tournaments</h3>
+            <p>166 options in 42 cities</p>
+        </a>
+        
+        <a href="../activities/water-sports/index.html" class="cat-card">
+            <h3>Water Sports</h3>
+            <p>122 options in 36 cities</p>
+        </a>
+        
+        <a href="../activities/online-trivia-games/index.html" class="cat-card">
+            <h3>Online Trivia/Games</h3>
+            <p>106 options in 31 cities</p>
+        </a>
+        
+        <a href="../activities/go-karts-racing/index.html" class="cat-card">
+            <h3>Go-Karts/Racing</h3>
+            <p>102 options in 41 cities</p>
+        </a>
+        
+        <a href="../activities/laser-tag-paintball/index.html" class="cat-card">
+            <h3>Laser Tag/Paintball</h3>
+            <p>95 options in 39 cities</p>
+        </a>
+        
+        <a href="../activities/hybrid-experiences/index.html" class="cat-card">
+            <h3>Hybrid Experiences</h3>
+            <p>94 options in 27 cities</p>
+        </a>
+        
+        <a href="../activities/wine-beer-cocktail-tastings/index.html" class="cat-card">
+            <h3>Wine/Beer/Cocktail Tastings</h3>
+            <p>91 options in 28 cities</p>
+        </a>
+        
+        <a href="../activities/scavenger-hunts/index.html" class="cat-card">
+            <h3>Scavenger Hunts</h3>
+            <p>86 options in 27 cities</p>
+        </a>
+        
+        <a href="../activities/hackathons/index.html" class="cat-card">
+            <h3>Hackathons</h3>
+            <p>86 options in 29 cities</p>
+        </a>
+        
+        <a href="../activities/pottery-classes/index.html" class="cat-card">
+            <h3>Pottery Classes</h3>
+            <p>71 options in 8 cities</p>
+        </a>
+        
+        <a href="../activities/dei-workshops/index.html" class="cat-card">
+            <h3>DEI Workshops</h3>
+            <p>70 options in 23 cities</p>
+        </a>
+        
+        <a href="../activities/remote-cooking-classes/index.html" class="cat-card">
+            <h3>Remote Cooking Classes</h3>
+            <p>67 options in 22 cities</p>
+        </a>
+        
+        <a href="../activities/personality-assessments/index.html" class="cat-card">
+            <h3>Personality Assessments</h3>
+            <p>63 options in 21 cities</p>
+        </a>
+        
+        <a href="../activities/virtual-murder-mystery/index.html" class="cat-card">
+            <h3>Virtual Murder Mystery</h3>
+            <p>55 options in 21 cities</p>
+        </a>
+        
+        <a href="../activities/rock-climbing/index.html" class="cat-card">
+            <h3>Rock Climbing</h3>
+            <p>46 options in 21 cities</p>
+        </a>
+        
+        <a href="../activities/performing-arts/index.html" class="cat-card">
+            <h3>Performing Arts</h3>
+            <p>18 options in 8 cities</p>
+        </a>
+        
+        <a href="../activities/pottery-workshops/index.html" class="cat-card">
+            <h3>Pottery Workshops</h3>
+            <p>16 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/zip-lines/index.html" class="cat-card">
+            <h3>Zip Lines</h3>
+            <p>14 options in 8 cities</p>
+        </a>
+        
+        <a href="../activities/live-music/index.html" class="cat-card">
+            <h3>Live Music</h3>
+            <p>12 options in 6 cities</p>
+        </a>
+        
+        <a href="../activities/bowling/index.html" class="cat-card">
+            <h3>Bowling</h3>
+            <p>11 options in 8 cities</p>
+        </a>
+        
+        <a href="../activities/canoeing-kayaking/index.html" class="cat-card">
+            <h3>Canoeing/Kayaking</h3>
+            <p>11 options in 4 cities</p>
+        </a>
+        
+        <a href="../activities/painting-lessons/index.html" class="cat-card">
+            <h3>Painting Lessons</h3>
+            <p>9 options in 6 cities</p>
+        </a>
+        
+        <a href="../activities/video-games/index.html" class="cat-card">
+            <h3>Video Games</h3>
+            <p>9 options in 6 cities</p>
+        </a>
+        
+        <a href="../activities/live-music/index.html" class="cat-card">
+            <h3>Live music</h3>
+            <p>9 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/sightseeing/index.html" class="cat-card">
+            <h3>Sightseeing</h3>
+            <p>8 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/miniature-golf/index.html" class="cat-card">
+            <h3>Miniature Golf</h3>
+            <p>8 options in 7 cities</p>
+        </a>
+        
+        <a href="../activities/indoor-playground/index.html" class="cat-card">
+            <h3>Indoor Playground</h3>
+            <p>7 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/culinary-classes/index.html" class="cat-card">
+            <h3>Culinary Classes</h3>
+            <p>7 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/corporate-events/index.html" class="cat-card">
+            <h3>Corporate Events</h3>
+            <p>7 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/rage-room/index.html" class="cat-card">
+            <h3>Rage Room</h3>
+            <p>7 options in 6 cities</p>
+        </a>
+        
+        <a href="../activities/art-exhibits/index.html" class="cat-card">
+            <h3>Art Exhibits</h3>
+            <p>7 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/rafting/index.html" class="cat-card">
+            <h3>Rafting</h3>
+            <p>7 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/archery/index.html" class="cat-card">
+            <h3>Archery</h3>
+            <p>6 options in 5 cities</p>
+        </a>
+        
+        <a href="../activities/catering/index.html" class="cat-card">
+            <h3>Catering</h3>
+            <p>6 options in 4 cities</p>
+        </a>
+        
+        <a href="../activities/zip-lining/index.html" class="cat-card">
+            <h3>Zip-lining</h3>
+            <p>6 options in 4 cities</p>
+        </a>
+        
+        <a href="../activities/painting-classes/index.html" class="cat-card">
+            <h3>Painting Classes</h3>
+            <p>6 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/atv-utv/index.html" class="cat-card">
+            <h3>ATV/UTV</h3>
+            <p>5 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/children-s-camps/index.html" class="cat-card">
+            <h3>Children&#39;s Camps</h3>
+            <p>5 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/children-s-parties/index.html" class="cat-card">
+            <h3>Children&#39;s Parties</h3>
+            <p>5 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/paintball/index.html" class="cat-card">
+            <h3>Paintball</h3>
+            <p>5 options in 4 cities</p>
+        </a>
+        
+        <a href="../activities/corporate-retreats/index.html" class="cat-card">
+            <h3>Corporate Retreats</h3>
+            <p>5 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/exhibits-demonstrations/index.html" class="cat-card">
+            <h3>Exhibits/Demonstrations</h3>
+            <p>5 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/culinary-experiences/index.html" class="cat-card">
+            <h3>Culinary Experiences</h3>
+            <p>5 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/amusement-attraction/index.html" class="cat-card">
+            <h3>Amusement/Attraction</h3>
+            <p>4 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/zip-lining/index.html" class="cat-card">
+            <h3>Zip Lining</h3>
+            <p>4 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/sightseeing-tour/index.html" class="cat-card">
+            <h3>Sightseeing Tour</h3>
+            <p>4 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/concerts/index.html" class="cat-card">
+            <h3>Concerts</h3>
+            <p>4 options in 4 cities</p>
+        </a>
+        
+        <a href="../activities/yoga/index.html" class="cat-card">
+            <h3>Yoga</h3>
+            <p>4 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/history-culture/index.html" class="cat-card">
+            <h3>History/Culture</h3>
+            <p>4 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/cocktail-tastings/index.html" class="cat-card">
+            <h3>Cocktail Tastings</h3>
+            <p>4 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/climbing/index.html" class="cat-card">
+            <h3>Climbing</h3>
+            <p>4 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/live-music-venue/index.html" class="cat-card">
+            <h3>Live music venue</h3>
+            <p>4 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/teambuilding-activities/index.html" class="cat-card">
+            <h3>Teambuilding Activities</h3>
+            <p>3 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/retreat/index.html" class="cat-card">
+            <h3>Retreat</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/cycling/index.html" class="cat-card">
+            <h3>Cycling</h3>
+            <p>3 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/painting/index.html" class="cat-card">
+            <h3>Painting</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/trampoline/index.html" class="cat-card">
+            <h3>Trampoline</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/art-classes/index.html" class="cat-card">
+            <h3>Art Classes</h3>
+            <p>3 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/ice-skating/index.html" class="cat-card">
+            <h3>Ice Skating</h3>
+            <p>3 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/rage-rooms/index.html" class="cat-card">
+            <h3>Rage Rooms</h3>
+            <p>3 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/summer-camps/index.html" class="cat-card">
+            <h3>Summer Camps</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/karaoke/index.html" class="cat-card">
+            <h3>Karaoke</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/painting-workshops/index.html" class="cat-card">
+            <h3>Painting Workshops</h3>
+            <p>3 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/culinary-education/index.html" class="cat-card">
+            <h3>Culinary Education</h3>
+            <p>3 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/art-exhibitions/index.html" class="cat-card">
+            <h3>Art Exhibitions</h3>
+            <p>3 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/camping/index.html" class="cat-card">
+            <h3>Camping</h3>
+            <p>3 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/summer-camp/index.html" class="cat-card">
+            <h3>Summer Camp</h3>
+            <p>3 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/boat-tours/index.html" class="cat-card">
+            <h3>Boat Tours</h3>
+            <p>3 options in 3 cities</p>
+        </a>
+        
+        <a href="../activities/virtual-hybrid/index.html" class="cat-card">
+            <h3>Virtual &amp; Hybrid</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/theater-performances/index.html" class="cat-card">
+            <h3>Theater Performances</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/gymnastics/index.html" class="cat-card">
+            <h3>Gymnastics</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/zip-lining/index.html" class="cat-card">
+            <h3>Zip-Lining</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/glass-blowing/index.html" class="cat-card">
+            <h3>Glass Blowing</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/outdoor-activity/index.html" class="cat-card">
+            <h3>Outdoor Activity</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/golf/index.html" class="cat-card">
+            <h3>Golf</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/parkour/index.html" class="cat-card">
+            <h3>Parkour</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/video-arcade/index.html" class="cat-card">
+            <h3>Video Arcade</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/boat-tour/index.html" class="cat-card">
+            <h3>Boat Tour</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/ziplines/index.html" class="cat-card">
+            <h3>Ziplines</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/children-s-camp/index.html" class="cat-card">
+            <h3>Children&#39;s camp</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/summer-camp-organizer/index.html" class="cat-card">
+            <h3>Summer camp organizer</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/climbing-walls/index.html" class="cat-card">
+            <h3>Climbing Walls</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/mini-golf/index.html" class="cat-card">
+            <h3>Mini-Golf</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/comedy-shows/index.html" class="cat-card">
+            <h3>Comedy Shows</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/shooting/index.html" class="cat-card">
+            <h3>Shooting</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/zip-line/index.html" class="cat-card">
+            <h3>Zip Line</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/laser-tag/index.html" class="cat-card">
+            <h3>Laser Tag</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/sculpture/index.html" class="cat-card">
+            <h3>Sculpture</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/fishing/index.html" class="cat-card">
+            <h3>Fishing</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/coworking/index.html" class="cat-card">
+            <h3>Coworking</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/sightseeing-tour-agency/index.html" class="cat-card">
+            <h3>Sightseeing tour agency</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/festivals/index.html" class="cat-card">
+            <h3>Festivals</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+        <a href="../activities/segway-tours/index.html" class="cat-card">
+            <h3>Segway Tours</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/rowing/index.html" class="cat-card">
+            <h3>Rowing</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/photography/index.html" class="cat-card">
+            <h3>Photography</h3>
+            <p>2 options in 2 cities</p>
+        </a>
+        
+        <a href="../activities/outdoor-concerts/index.html" class="cat-card">
+            <h3>Outdoor Concerts</h3>
+            <p>2 options in 1 cities</p>
+        </a>
+        
+    </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 TeamBuildingCity. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="../cities/index.html">All Cities</a>
+                <a href="../states/index.html">By State</a>
+                <a href="../activities/index.html">Activities</a>
+                <a href="../about/index.html">About</a>
+                <a href="../contact/index.html">Contact</a>
+            </nav>
+            <nav class="footer-legal">
+                <a href="../privacy/index.html">Privacy Policy</a>
+                <a href="../terms/index.html">Terms of Use</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-overlay"></div>
+        <div class="auth-modal-content">
+            <button class="auth-modal-close" aria-label="Close">&times;</button>
+            <div class="auth-tabs">
+                <button id="auth-tab-login" class="auth-tab active" onclick="switchAuthMode('login')">Sign In</button>
+                <button id="auth-tab-signup" class="auth-tab" onclick="switchAuthMode('signup')">Create Account</button>
+            </div>
+            <div id="auth-login-form">
+                <form id="login-form">
+                    <div class="auth-field">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Sign In</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+            <div id="auth-signup-form" style="display:none;">
+                <form id="signup-form">
+                    <div class="auth-field">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="6" autocomplete="new-password">
+                    </div>
+                    <div class="auth-error" style="display:none;"></div>
+                    <div class="auth-success" style="display:none;"></div>
+                    <button type="submit" class="btn-auth-submit">Create Account</button>
+                </form>
+                <div class="auth-divider"><span>or</span></div>
+                <button class="btn-google" onclick="handleGoogleLogin()">
+                    <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Continue with Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="../static/js/auth.js"></script>
+    
+</body>
+</html>
