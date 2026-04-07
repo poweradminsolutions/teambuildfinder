@@ -104,7 +104,10 @@
 </section>
 
 <section class="states-list">
-    <div class="grid">
+    <div class="search-bar" style="max-width:480px;margin:0 auto 1.5rem;">
+        <input type="text" id="states-filter" placeholder="Search by state name..." autocomplete="off" aria-label="Filter states">
+    </div>
+    <div class="grid" id="states-grid">
         
         <a href="../states/alabama/index.html" class="city-card">
             <h3>Alabama</h3>
@@ -217,7 +220,31 @@
         </a>
         
     </div>
+    <p id="states-no-results" style="color:#6b7280;text-align:center;padding:2rem 1.5rem;display:none;">No states match your search.</p>
 </section>
+
+<script>
+(function(){
+    var input = document.getElementById('states-filter');
+    var grid = document.getElementById('states-grid');
+    if (!input || !grid) return;
+    var cards = Array.from(grid.querySelectorAll('.city-card'));
+    var noResults = document.getElementById('states-no-results');
+    input.addEventListener('input', function(){
+        var q = this.value.toLowerCase().trim();
+        var visible = 0;
+        cards.forEach(function(c){
+            var show = !q || c.textContent.toLowerCase().includes(q);
+            c.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+        noResults.style.display = (q && visible === 0) ? '' : 'none';
+    });
+    input.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') { this.value = ''; this.dispatchEvent(new Event('input')); this.blur(); }
+    });
+})();
+</script>
 
     </main>
 

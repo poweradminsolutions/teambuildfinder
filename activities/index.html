@@ -104,7 +104,10 @@
 </section>
 
 <section class="category-grid">
-    <div class="grid">
+    <div class="search-bar" style="max-width:480px;margin:0 auto 1.5rem;">
+        <input type="text" id="activities-filter" placeholder="Search activity types..." autocomplete="off" aria-label="Filter activity types">
+    </div>
+    <div class="grid" id="activities-grid">
         
         <a href="../activities/facilitated-workshops/index.html" class="cat-card">
             <h3>Facilitated Workshops</h3>
@@ -642,7 +645,31 @@
         </a>
         
     </div>
+    <p id="activities-no-results" style="color:#6b7280;text-align:center;padding:2rem 1.5rem;display:none;">No activity types match your search.</p>
 </section>
+
+<script>
+(function(){
+    var input = document.getElementById('activities-filter');
+    var grid = document.getElementById('activities-grid');
+    if (!input || !grid) return;
+    var cards = Array.from(grid.querySelectorAll('.cat-card'));
+    var noResults = document.getElementById('activities-no-results');
+    input.addEventListener('input', function(){
+        var q = this.value.toLowerCase().trim();
+        var visible = 0;
+        cards.forEach(function(c){
+            var show = !q || c.textContent.toLowerCase().includes(q);
+            c.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+        noResults.style.display = (q && visible === 0) ? '' : 'none';
+    });
+    input.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') { this.value = ''; this.dispatchEvent(new Event('input')); this.blur(); }
+    });
+})();
+</script>
 
     </main>
 

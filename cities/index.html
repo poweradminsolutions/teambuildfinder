@@ -99,7 +99,10 @@
 </section>
 
 <section class="cities-list">
-    <div class="grid">
+    <div class="search-bar" style="max-width:480px;margin:0 auto 1.5rem;">
+        <input type="text" id="cities-filter" placeholder="Search by city or state..." autocomplete="off" aria-label="Filter cities">
+    </div>
+    <div class="grid" id="cities-grid">
         
         <a href="../cities/albany-ny/index.html" class="city-card">
             <h3>Albany, NY</h3>
@@ -322,7 +325,31 @@
         </a>
         
     </div>
+    <p id="cities-no-results" style="color:#6b7280;text-align:center;padding:2rem 1.5rem;display:none;">No cities match your search. Try a different name or state abbreviation.</p>
 </section>
+
+<script>
+(function(){
+    var input = document.getElementById('cities-filter');
+    var grid = document.getElementById('cities-grid');
+    if (!input || !grid) return;
+    var cards = Array.from(grid.querySelectorAll('.city-card'));
+    var noResults = document.getElementById('cities-no-results');
+    input.addEventListener('input', function(){
+        var q = this.value.toLowerCase().trim();
+        var visible = 0;
+        cards.forEach(function(c){
+            var show = !q || c.textContent.toLowerCase().includes(q);
+            c.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+        noResults.style.display = (q && visible === 0) ? '' : 'none';
+    });
+    input.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') { this.value = ''; this.dispatchEvent(new Event('input')); this.blur(); }
+    });
+})();
+</script>
 
     </main>
 
