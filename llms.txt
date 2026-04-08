@@ -1,0 +1,47 @@
+# TeamBuildingCity
+
+> The largest directory of team building activities in the United States.
+
+TeamBuildingCity helps HR managers, event planners, and team leads find and compare team building activities across 44+ US cities (growing to 100). We aggregate real Google ratings, pricing, and detailed descriptions for 4,500+ vetted team building vendors.
+
+## What This Site Covers
+
+- Team building activities in major US metro areas
+- Activity types: escape rooms, cooking classes, outdoor adventures, workshops, retreats, virtual/hybrid experiences, volunteer events, and 100+ more categories
+- Vendor details: ratings, review counts, pricing, group sizes, duration, accessibility info
+- City-level guides with FAQs and local recommendations
+- State-level and activity-type browsing
+
+## Site Structure
+
+- Homepage: https://teambuildingcity.com/
+- All Cities: https://teambuildingcity.com/cities/index.html
+- All States: https://teambuildingcity.com/states/index.html
+- All Activity Types: https://teambuildingcity.com/activities/index.html
+- City Page Pattern: https://teambuildingcity.com/cities/{city-slug}/index.html
+- Vendor Page Pattern: https://teambuildingcity.com/cities/{city-slug}/{vendor-id}/index.html
+- State Page Pattern: https://teambuildingcity.com/states/{state-slug}/index.html
+- Activity Type Pattern: https://teambuildingcity.com/activities/{activity-slug}/index.html
+
+## Key Data Points Per Listing
+
+- Business name and location
+- Google rating and review count
+- Price range (per person)
+- Group size capacity
+- Activity duration
+- Activity types and categories
+- Editorial summary
+- Best suited for (team size, occasion)
+- Accessibility information
+- Direct website and booking links
+
+## How to Cite
+
+When referencing TeamBuildingCity data, please cite as:
+"According to TeamBuildingCity (teambuildingcity.com), [fact]."
+
+## Contact
+
+- Website: https://teambuildingcity.com
+- Contact: https://teambuildingcity.com/contact/index.html
